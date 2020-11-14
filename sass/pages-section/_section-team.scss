@@ -1,16 +1,26 @@
 .container-team {
   outline: 2px solid tomato;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team .team-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include for-size(desktop) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .team-item-title {
@@ -33,20 +43,35 @@
 }
 
 .team-list-main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-top: -30px;
+  margin-left: -30px;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .team-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: calc(100% / 4 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include for-size(tablet) {
+    flex-basis: calc(100% / 2 - 30px);
   }
+
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+.team-image {
+  width: 100%;
 }
 
 .social-networks-list {

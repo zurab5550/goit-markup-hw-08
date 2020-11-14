@@ -7,6 +7,10 @@
     @media (max-width: #{$tablet - 1}) {
       @content;
     }
+  } @else if $range == desktop-only {
+    @media screen and (max-width: #{$desktop - 1}) {
+      @content;
+    }
   } @else if $range == mobile {
     @media (min-width: $mobile) {
       @content;

@@ -1,6 +1,10 @@
-.option {
+.section.option {
   outline: 2px solid tomato;
   padding-top: 94px;
+
+  @include for-size(desktop-only) {
+    @include visuallyHidden();
+  }
 }
 
 .option-title {
