@@ -1,0 +1,51 @@
+.section-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+}
+
+.clients-item {
+  width: 100%;
+
+  &:not(:last-child):not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: $accent-color;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    outline-color: $accent-color;
+  }
+}
+
+.clients-icon {
+  fill: $secondary-text-color;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}

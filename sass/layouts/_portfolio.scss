@@ -1,0 +1,126 @@
+.container-features {
+  outline: 2px solid tomato;
+  padding-top: 100px;
+  padding-bottom: 94px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.features-list .link:hover,
+.features-list .link:focus {
+  color: $white-color;
+  background-color: $accent-color;
+  border-radius: 4px;
+}
+
+.features-item {
+  margin-bottom: 50px;
+}
+
+.button.link {
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature-pictures {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.overley .overley-text {
+  outline: 2px solid tomato;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $white-color;
+  text-align: left;
+  margin: 0;
+}
+.overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform $duration $timming-function;
+}
+
+.picture-link {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.picture-item:hover .overley,
+.picture-item:focus .overley {
+  transform: translateY(0);
+}
+
+.feature-title-text {
+  padding: 20px 24px 54px 24px;
+}
+
+.container-features {
+  padding-bottom: 94px;
+}
+
+.picture-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc(100% / 3 - 30px);
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.picture-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $primary-text-color;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.picture-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features .link {
+  color: $primary-text-color;
+
+  &:hover,
+  :focus {
+    color: $white-color;
+    background: $accent-color;
+  }
+}

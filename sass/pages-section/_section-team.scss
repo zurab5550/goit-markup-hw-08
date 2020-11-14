@@ -1,0 +1,130 @@
+.container-team {
+  outline: 2px solid tomato;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team .team-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-item-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+}
+
+.team-item-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}
+
+.team-list-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.team-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc(100% / 4 - 30px);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.social-networks-list {
+  outline: 2px solid blue;
+  display: flex;
+  justify-content: center;
+}
+
+.social-networks-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-networks-list-icon {
+  fill: #afb1b8;
+
+  & {
+    transition: fill $duration $timming-function;
+  }
+}
+
+.social-networks-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: 2px solid red;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  & {
+    transition: fill $duration $timming-function;
+  }
+
+  &:hover .social-networks-list-icon,
+  &:focus .social-networks-list-icon {
+    fill: $white-color;
+  }
+}
+
+.team-title .section-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: $primary-text-color;
+}
+
+.section-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: $secondary-text-color;
+}
+.team {
+  background: #f5f4fa;
+}
+
+.team .section-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.section-team .section-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}

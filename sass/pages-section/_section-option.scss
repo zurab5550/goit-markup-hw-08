@@ -1,0 +1,65 @@
+.option {
+  outline: 2px solid tomato;
+  padding-top: 94px;
+}
+
+.option-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.text-position {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: $white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.option-position-text {
+  outline: 3px solid red;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.option-item {
+  position: relative;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc(100% / 3 - 30px);
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.option-text {
+  margin: 0;
+}
