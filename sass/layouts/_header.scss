@@ -20,9 +20,14 @@
 .site-nav {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .site-nav-item .link {
@@ -95,12 +100,39 @@
 
 /* contacts */
 .contacts {
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .contacts-svg {
   margin-right: 10px;
+  @include for-size(tablet-desktop-1) {
+    margin-right: 8px;
+  }
+}
+
+.contacts-svg-letter {
+  width: 14px;
+  height: 10px;
+  @include for-size(desktop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts-svg-phone {
+  width: 10px;
+  height: 14px;
+
+  @include for-size(desktop) {
+    width: 12px;
+    height: 16px;
+  }
 }
 
 .contacts .link {

@@ -70,10 +70,17 @@ body {
   margin-right: 93px;
   color: #212121;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .button {
@@ -300,9 +307,16 @@ body {
 .site-nav {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .site-nav-item .link {
@@ -372,13 +386,50 @@ body {
 
 /* contacts */
 .contacts {
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .contacts-svg {
   margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-svg {
+    margin-right: 8px;
+  }
+}
+
+.contacts-svg-letter {
+  width: 14px;
+  height: 10px;
+}
+
+@media (min-width: 1200px) {
+  .contacts-svg-letter {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts-svg-phone {
+  width: 10px;
+  height: 14px;
+}
+
+@media (min-width: 1200px) {
+  .contacts-svg-phone {
+    width: 12px;
+    height: 16px;
+  }
 }
 
 .contacts .link {
@@ -736,6 +787,7 @@ body {
 
 .team-image {
   width: 100%;
+  display: block;
 }
 
 .social-networks-list {
