@@ -100,6 +100,7 @@
 
 /* contacts */
 .contacts {
+  display: inline-block;
   font-size: 18px;
   line-height: 1.16;
   letter-spacing: 0.02em;
@@ -108,8 +109,13 @@
     font-size: 14px;
     line-height: 1.14;
   }
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 .contacts-svg {
+  display: inline-block;
   margin-right: 10px;
   @include for-size(tablet-desktop-1) {
     margin-right: 8px;

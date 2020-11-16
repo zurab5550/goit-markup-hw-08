@@ -386,6 +386,7 @@ body {
 
 /* contacts */
 .contacts {
+  display: inline-block;
   font-size: 18px;
   line-height: 1.16;
   letter-spacing: 0.02em;
@@ -398,7 +399,14 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .contacts {
+    display: flex;
+  }
+}
+
 .contacts-svg {
+  display: inline-block;
   margin-right: 10px;
 }
 
