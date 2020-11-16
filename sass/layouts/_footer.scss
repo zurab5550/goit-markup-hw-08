@@ -82,9 +82,16 @@
   letter-spacing: 0.03em;
 }
 
+.footer-items.footer-item.footer-item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include for-size(desktop) {
+    margin-bottom: 9px;
+  }
+}
+
 .footer-items.address {
   color: $white-color;
-  padding-bottom: 9px;
 }
 
 .footer-list-contacts .link {
