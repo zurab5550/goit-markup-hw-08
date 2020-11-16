@@ -110,6 +110,10 @@
     line-height: 1.14;
   }
 
+  @include for-size(tablet-desktop-1) {
+    margin-left: 84px;
+  }
+
   @include for-size(desktop) {
     display: flex;
   }
