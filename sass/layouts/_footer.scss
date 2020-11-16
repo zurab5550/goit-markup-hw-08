@@ -6,30 +6,53 @@
 
 .footer-container {
   align-items: center;
-}
-
-@include for-size(desktop) {
-  .footer-container {
-    flex-wrap: nowrap;
-  }
+  outline: 2px solid green;
 }
 
 @include for-size(tablet) {
-  .footer-list {
+  .footer-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: baseline;
   }
 }
 
-.footer-container .footer-item {
-  text-align: center;
+.footer-container .footer-item:not(:last-child) {
+  @include for-size(tablet) {
+    width: 50%;
+  }
 }
 
 .footer-container .footer-item:last-child {
-  flex-basis: 100%;
+  @include for-size(tablet) {
+    width: 100%;
+  }
+}
+
+.footer-container .footer-item.footer-item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.footer-container .footer-item {
+  text-align: center;
+
+  @include for-size(desktop) {
+    text-align: left;
+  }
+}
+
+.footer-container .footer-item:not(:last-child) {
+  @include for-size(desktop) {
+    width: calc((50% - 45px) / 2);
+  }
+}
+
+.footer-container .footer-item:last-child {
+  @include for-size(desktop) {
+    width: calc(50% - 15px);
+  }
 }
 
 .footer-list-contacts {
@@ -40,12 +63,7 @@
   padding: 0;
 }
 
-.footer-list {
-  padding-bottom: 9px;
-}
-
 .footer-list-title {
-  display: inline-block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -55,13 +73,18 @@
   margin: 0px 0px 20px 0px;
 }
 
-.footer-item-address {
-  color: $white-color;
+.footer-address {
+  margin-bottom: 0;
   padding-top: 20px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+
+.footer-items.address {
+  color: $white-color;
+  padding-bottom: 9px;
 }
 
 .footer-list-contacts .link {
@@ -126,9 +149,10 @@
 .subscribe-form {
   // display: flex;
   // justify-content: space-between;
-  display: flex;
+
+  // display: flex;
   flex-direction: column;
-  align-items: center;
+
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -138,18 +162,23 @@
   }
 
   @include for-size(desktop) {
+    display: flex;
     flex-direction: row;
   }
 }
 
 .footer-form-field {
+  margin-bottom: 20px;
   width: 358px;
-  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: #2f303a;
-  color: $white-color;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  background-color: inherit;
 }
 
 .subscribe-footer-icon {
@@ -158,6 +187,7 @@
 }
 
 .footer .button {
+  align-items: center;
   display: inline-flex;
   width: 200px;
   height: 50px;

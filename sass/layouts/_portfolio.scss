@@ -6,11 +6,23 @@
 
 .features-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include for-size(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .features-list .link:hover,
@@ -21,7 +33,7 @@
 }
 
 .features-item {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .button.link {
@@ -30,14 +42,22 @@
 }
 
 .features-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 8px;
 }
 
 .feature-pictures {
-  display: flex;
-  flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .overley .overley-text {
@@ -84,15 +104,26 @@
 .picture-item {
   margin-right: 30px;
   margin-bottom: 30px;
-  width: calc(100% / 3 - 30px);
 
-  &:nth-child(3n) {
-    margin-right: 0;
+  @include for-size(tablet) {
+    flex-basis: calc(100% / 2 - 30px);
   }
 
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+
+    // &:nth-child(3n) {
+    //   margin-right: 0;
+    // }
+
+    // &:nth-last-child(-n + 3) {
+    //   margin-bottom: 0;
+    // }
   }
+}
+
+.picture-image {
+  width: 100%;
 }
 
 .picture-title {

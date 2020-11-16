@@ -16,7 +16,7 @@
   </head>
   <body>
     <!--SHAPKA-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="navigation">
           <a href="./index.html" class="logo"><span class="accent">Web</span>Studio </a>
@@ -47,8 +47,9 @@
           </li>
         </ul>
       </div>
-    </header> -->
-    <!--TELO-->
+    </header>
+
+    <!-- TELO -->
 
     <main>
       <section class="hero hero-image">
@@ -138,8 +139,6 @@
         </div>
       </section>
 
-      <!-- 4 texta -->
-
       <section class="section function">
         <div class="container container-function">
           <ul class="function-list">
@@ -175,21 +174,54 @@
           <ul class="option-list">
             <li class="option-item">
               <div class="image-position">
-                <img class="image" src="./img/img1.jpg" alt="working on PC" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/img1.jpg 1x, ./img/desktop/img1@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source srcset="./img/tablet/img1.jpg 1x, ./img/tablet/img1@2x.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="./img/mobile/img1.jpg 1x, ./img/mobile/img1@2x.jpg 2x" media="(max-width: 767px)" />
+                  <img class="image" src="./img/desktop/img1.jpg" alt="working on PC" width="370" height="294" />
+                </picture>
+
                 <div class="text-position"><h3 class="option-text">Десктопные приложения</h3></div>
               </div>
             </li>
 
             <li class="option-item">
               <div class="image-position">
-                <img class="image" src="./img/img2.jpg" alt="smartphone working" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/img2.jpg 1x, ./img/desktop/img2@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source srcset="./img/tablet/img2.jpg 1x, ./img/tablet/img2@2x.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="./img/mobile/img2.jpg 1x, ./img/mobile/img2@2x.jpg 2x" media="(max-width: 767px)" />
+                  <img class="image" src="./img/desktop/img2.jpg" alt="smartphone working" width="370" height="294" />
+                </picture>
+
                 <div class="text-position"><h3 class="option-text">Мобильные приложения</h3></div>
               </div>
             </li>
 
             <li class="option-item">
               <div class="image-position">
-                <img class="image" src="./img/img3.jpg" alt="rainbow on the screen" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/img3.jpg 1x, ./img/desktop/img3@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source srcset="./img/tablet/img3.jpg 1x, ./img/tablet/img3@2x.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="./img/mobile/img3.jpg 1x, ./img/mobile/img3@2x.jpg 2x" media="(max-width: 767px)" />
+                  <img
+                    class="image"
+                    src="./img/desktop/img3.jpg"
+                    alt="rainbow on the screen"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <div class="text-position"><h3 class="option-text">Дизайнерские решения</h3></div>
               </div>
             </li>
@@ -205,7 +237,21 @@
             <h2 class="team-title">Наша команда</h2>
             <ul class="team-list-main">
               <li class="team-item">
-                <img class="team-image" src="./img/imgman1.jpg" alt="Igor" width="270" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/imgman1.jpg 1x, ./img/desktop/imgman1@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/tablet/imgman1.jpg 1x, ./img/tablet/imgman1@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/mobile/imgman1.jpg 1x, ./img/mobile/imgman1@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="team-image" src="./img/desktop/imgman1.jpg" alt="Igor" width="450" />
+                </picture>
                 <h3 class="team-item-title">Игорь Демьяненко</h3>
                 <p class="team-item-text">Product Designer</p>
                 <ul class="social social-networks-list">
@@ -268,7 +314,21 @@
               </li>
 
               <li class="team-item">
-                <img class="team-image" src="./img/imgman2.jpg" alt="Olga" width="270" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/imgman2.jpg 1x, ./img/desktop/imgman2@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/tablet/imgman2.jpg 1x, ./img/tablet/imgman2@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/mobile/imgman2.jpg 1x, ./img/mobile/imgman2@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="team-image" src="./img/desktop/imgman2.jpg" alt="Olga" width="450" />
+                </picture>
                 <h3 class="team-item-title">Ольга Репина</h3>
                 <p class="team-item-text">Frontend Developer</p>
                 <ul class="social social-networks-list">
@@ -331,7 +391,22 @@
               </li>
 
               <li class="team-item">
-                <img class="team-image" src="./img/imgman3.jpg" alt="Nikolay" width="270" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/imgman3.jpg 1x, ./img/desktop/imgman3@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/tablet/imgman3.jpg 1x, ./img/tablet/imgman3@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/mobile/imgman3.jpg 1x, ./img/mobile/imgman3@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="team-image" src="./img/desktop/imgman3.jpg" alt="Nikolay" width="450" />
+                </picture>
+
                 <h3 class="team-item-title">Николай Тарасов</h3>
                 <p class="team-item-text">Marketing</p>
                 <ul class="social social-networks-list">
@@ -394,7 +469,22 @@
               </li>
 
               <li class="team-item">
-                <img class="team-image" src="./img/imgman4.jpg" alt="Mihail" width="270" />
+                <picture>
+                  <source
+                    srcset="./img/desktop/imgman4.jpg 1x, ./img/desktop/imgman4@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/tablet/imgman4.jpg 1x, ./img/tablet/imgman4@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./img/mobile/imgman4.jpg 1x, ./img/mobile/imgman4@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="team-image" src="./img/desktop/imgman4.jpg" alt="Mihail" width="450" />
+                </picture>
+
                 <h3 class="team-item-title">Михаил Ермаков</h3>
                 <p class="team-item-text">UI Designer</p>
                 <ul class="social social-networks-list">
@@ -525,11 +615,11 @@
           <a href="./index.html" class="logo"><span class="accent">Web</span>Studio </a>
           <address class="footer-address">
             <ul class="footer-list">
-              <li class="footer-item-address">г. Киев, пр-т Леси Украинки, 26</li>
+              <li class="footer-items address">г. Киев, пр-т Леси Украинки, 26</li>
             </ul>
             <ul class="footer-list-contacts">
-              <li class="footer-item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-              <li class="footer-item"><a href="tel:+38096111111" class="link">+38096111111</a></li>
+              <li class="footer-items"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+              <li class="footer-items"><a href="tel:+38096111111" class="link">+38096111111</a></li>
             </ul>
           </address>
         </section>
