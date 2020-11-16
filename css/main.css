@@ -67,6 +67,7 @@ body {
 }
 
 .logo {
+  margin-right: 93px;
   color: #212121;
   font-family: Raleway, sans-serif;
   font-size: 26px;
@@ -283,8 +284,6 @@ body {
 
 .header {
   background: #ffffff;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .header-container {
@@ -304,6 +303,12 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav-item .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav-item:not(:last-child) {
@@ -362,7 +367,7 @@ body {
   height: 4px;
   background: #2196f3;
   border-radius: 2px;
-  bottom: -32px;
+  bottom: -1px;
 }
 
 /* contacts */
@@ -994,7 +999,12 @@ body {
 
 .social-footer-list {
   display: flex;
-  justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .social-footer-list {
+    justify-content: center;
+  }
 }
 
 .social-footer-link {

@@ -1,7 +1,5 @@
 .header {
   background: $white-color;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .header-container {
@@ -25,6 +23,12 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav-item .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav-item:not(:last-child) {
@@ -85,7 +89,7 @@
     height: 4px;
     background: $accent-color;
     border-radius: 2px;
-    bottom: -32px;
+    bottom: -1px;
   }
 }
 

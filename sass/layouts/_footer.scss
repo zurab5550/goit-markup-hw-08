@@ -102,7 +102,10 @@
 
 .social-footer-list {
   display: flex;
-  justify-content: center;
+
+  @include for-size(desktop-only) {
+    justify-content: center;
+  }
 }
 
 .social-footer-link {
