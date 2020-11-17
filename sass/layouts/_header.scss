@@ -1,58 +1,87 @@
 .header {
+  position: relative;
   background: $white-color;
+
+  @media screen and(max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @media screen and(min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
-  outline: 2px solid tomato;
+  @media screen and(max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $white-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    // display: flex;
+    // align-items: center;
+  }
+
+  @media screen and(min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.header-container.is-open {
+  display: block;
 }
 
 .navigation {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 // .logo {
 //   margin-right: 93px;
 // }
-
 .site-nav {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
+  @media screen and(max-width: 767px) {
+    margin-bottom: 60px;
+    &-item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 
-  @include for-size(tablet) {
-    font-size: 14px;
-    line-height: 1.14;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    &-item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
+// .site-nav {
+//   display: none;
+//   display: flex;
+//   align-items: center;
+//   font-size: 18px;
+//   line-height: 1.16;
+//   letter-spacing: 0.02em;
 
-.site-nav-item .link {
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
+//   @include for-size(tablet) {
+//     font-size: 14px;
+//     line-height: 1.14;
+//   }
+// }
 
-.site-nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.contacts {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.contacts-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.contacts-svg {
-  fill: currentColor;
-}
+// .site-nav-item .link {
+//   display: inline-block;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+// }
 
 .accent {
   color: $accent-color;
@@ -88,36 +117,77 @@
 
   &::after {
     content: "";
-    display: block;
     position: absolute;
+    bottom: -8px;
+    left: 0;
     width: 100%;
     height: 4px;
     background: $accent-color;
     border-radius: 2px;
-    bottom: -1px;
+  }
+}
+
+@include for-size(tablet) {
+  .site-nav .link-current::after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+    bottom: 0;
   }
 }
 
 /* contacts */
-.contacts {
+
+.menu-open-window {
   display: inline-block;
-  font-size: 18px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
 
-  @include for-size(tablet) {
-    font-size: 14px;
-    line-height: 1.14;
+  @media screen and(min-width: 768px) {
+    display: none;
   }
+}
 
-  @include for-size(tablet-desktop-1) {
-    margin-left: 84px;
-  }
-
-  @include for-size(desktop) {
+.contacts {
+  @media screen and(min-width: 1200px) {
     display: flex;
   }
 }
+
+.contacts-item {
+  @media screen and(max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  @media screen and(min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts-svg {
+  fill: currentColor;
+}
+
+// .contacts {
+//
+//   font-size: 18px;
+//   line-height: 1.16;
+//   letter-spacing: 0.02em;
+
+//   @include for-size(tablet) {
+//     font-size: 14px;
+//     line-height: 1.14;
+//   }
+
+//   @include for-size(desktop) {
+//     display: flex;
+//   }
+// }
+
 .contacts-svg {
   display: inline-block;
   margin-right: 10px;
@@ -159,4 +229,27 @@
 .contacts .link-contacts {
   color: $secondary-text-color;
   text-decoration: none;
+}
+
+.button-burger {
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.button-burger.is-open .menu-burger {
+  display: none;
+}
+
+.button-burger.is-open .menu-cross {
+  display: block;
+}
+
+.button-burger .menu-cross {
+  display: none;
 }
